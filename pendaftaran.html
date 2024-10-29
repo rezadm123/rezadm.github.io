@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pendaftaran Pengguna</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+      .form-container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+      }
+      .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #d30c0c;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .form-group input[type="checkbox"] {
+        width: auto;
+      }
+      .submit-btn {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #d30c0c;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .submit-btn:hover {
+        background-color: #000305;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Formulir Pendaftaran</h2>
+      <form action="/submit_form" method="post" onsubmit="return validateForm()">
+        <div class="form-group">
+          <label for="name">Nama:</label>
+          <input type="text" id="name" name="name" required oninvalid="this.setCustomValidity('Harap masukkan nama Anda')" oninput="setCustomValidity('')" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required oninvalid="this.setCustomValidity('Harap masukkan email yang valid')" oninput="setCustomValidity('')" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required oninvalid="this.setCustomValidity('Harap masukkan password Anda')" oninput="setCustomValidity('')" />
+        </div>
+
+        <div class="form-group">
+          <label for="package">Pilih Paket Berlangganan:</label>
+          <select id="package" name="package" required oninvalid="this.setCustomValidity('Harap pilih paket berlangganan')" oninput="setCustomValidity('')">
+            <option value="">Pilih Paket</option>
+            <option value="basic">Paket Basic</option>
+            <option value="premium">Paket Standar</option>
+            <option value="pro">Paket Premium</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="terms" name="terms" required oninvalid="this.setCustomValidity('Anda harus menyetujui syarat dan ketentuan')" oninput="setCustomValidity('')" />
+            Saya setuju dengan syarat dan ketentuan
+          </label>
+        </div>
+        <button type="submit" class="submit-btn">Daftar</button>
+      </form>
+      <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

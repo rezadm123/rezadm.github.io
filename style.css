@@ -1,0 +1,145 @@
+/* style.css */
+
+/* Atur jarak dan padding keseluruhan */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.9;
+  padding-top: 80px; /* Sesuaikan dengan tinggi navbar */
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/* Banner */
+.banner {
+  background-image: url(https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2018/11/dark-wallpapers.jpg); /* Ganti dengan gambar banner Anda */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding-bottom: 50px;
+  padding-top: 50%;
+}
+
+.banner h4 {
+  font-weight: 300;
+}
+
+.banner h3 {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.banner .btn {
+  margin-top: 20px;
+}
+
+/* Paragraf pembuka */
+.container > h1 {
+  margin-top: 30px;
+  font-weight: bold;
+  color: #212529;
+}
+
+.container > p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* Fitur Aplikasi */
+.features h2 {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.features ul {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.features ul li {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+/* Tabel Harga Paket */
+.pricing-table h2 {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.pricing-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 15px;
+  border: 1px solid #dee2e6;
+  text-align: center;
+}
+
+.pricing-table th {
+  background-color: #141212;
+  color: white;
+  font-weight: bold;
+}
+
+/* Kartu */
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Media Demo Aplikasi */
+.media h2 {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.media img {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.media video {
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Link Resmi */
+.official-link h2 {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.official-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.official-link a:hover {
+  text-decoration: underline;
+}
+
+/* Iframe */
+.official-link iframe {
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
